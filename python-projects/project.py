@@ -27,7 +27,14 @@ def first_choice(n):   # Acts as a switch case statement that will check all the
         return int(input("(1) Travel\n\n(2) Dungeon\n\n(3) Town/Village\n\n(4) City\n\nInput (1-4)"))
     else:
         return 0
-travel_event()
+
+def travel_events():
+    print("\n-------------------------------------\n"," Travel Event Tables\n","\b-------------------------------------\n")
+    n = int(input("Where are you travelling?\n\n(1) Desert\n\n(2) Ocean\n\n(3) Mountain\n\n(4) Random\n\nSelect (1-4)"))
+    
+    if n == 1:
+        # desert_Array[] = rand() need to figure out what this will be gonna use a Dict to figure it out
+    
 
 ##
 #   function: error_check
@@ -62,7 +69,7 @@ def checker(n):
         if x <= 0 or x > 4:
             return 0
         if x == 1:
-            travel_events() # The travel event function will then expand to allow the user to select different climates or roll on a mass table
+            return travel_events() # The travel event function will then expand to allow the user to select different climates or roll on a mass table
     
         
 
