@@ -11,4 +11,4 @@ The point is to provide a faster and more random experience overall while sticki
 """
 print("\n-------------------------------------\n","DCC Random Tables\n","\b-------------------------------------\n")
 
-choice = input("Select what table number you want:\n\n(1) Radom Events\n\n(2) ")
+choice = input("Select what table number you want:\n\n(1) Random Events\n\n(2) ")
