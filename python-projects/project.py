@@ -27,6 +27,8 @@ def first_choice(n):   # Acts as a switch case statement that will check all the
         return int(input("(1) Travel\n\n(2) Dungeon\n\n(3) Town/Village\n\n(4) City\n\nInput (1-4)"))
     else:
         return 0
+travel_event()
+
 ##
 #   function: error_check
 #
@@ -56,7 +58,11 @@ def error_check(n):
 ##
 def checker(n):
     if n == 1:
-        return first_choice(n)
+        x = first_choice(n)
+        if x <= 0 or x > 4:
+            return 0
+        if x == 1:
+            travel_events() # The travel event function will then expand to allow the user to select different climates or roll on a mass table
     
         
 
@@ -72,7 +78,7 @@ while i == 1:
         i -= 1
     choice_1 = error_check(choice_1)
     
-    checker(choice_1)
+    choice_2 = checker(choice_1)
         
 
 # The following will be the future choices that will be given to the user (1) Over-World Travel Events\n\n(2) Dungeon Encounters\n\n(3)"
