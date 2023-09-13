@@ -14,29 +14,28 @@ So that the User will not have to manually input the command into the terminal.
 """
 ## Function Definitions, need to make a header file later
 
-"""
-Function: first_choice
-
-Input: int data type that represents the first selection the user made
-
-Return: int data type represents preceding choice
-
-""" 
+##
+#   function: first_choice(int)
+#
+#   input: int data type that represents the first selection the user made
+#
+#   return: int data type represents preceding choice
+## 
 def first_choice(n):   # Acts as a switch case statement that will check all the possible choices and return The next dialouge box for the user
     if n == 1:         # Choice for Events
         print("\n-------------------------------------\n","Event Tables\n","\b-------------------------------------\n")
         return int(input("(1) Travel\n\n(2) Dungeon\n\n(3) Town/Village\n\n(4) City\n\nInput (1-4)"))
     else:
         return 0
-"""
-Function: error_check
-
-Input: int data type
-
-return: true or false
-
-purpose: check if the user input a incorrect value
-"""
+##
+#   function: error_check
+#
+#   input: int data type
+#
+#   return: true or false
+#
+#   purpose: check if the user input a incorrect value
+##
 def error_check(n):
     if n > 0:
         return n
@@ -48,14 +47,13 @@ def error_check(n):
             return -1
         else:
             return n
-"""
-function: checker(int)
-
-Input: int data type, representing the very first number input from the user
-
-return: Returns number that will be used to summon the array that holds the respective table
-
-"""
+##
+#   function: checker(int)
+#
+#   Input: int data type, representing the very first number input from the user
+#
+#   return: Returns number that will be used to summon the array that holds the respective table
+##
 def checker(n):
     if n == 1:
         return first_choice(n)
