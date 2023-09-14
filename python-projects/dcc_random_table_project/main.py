@@ -26,10 +26,11 @@ while i == 1:
 
     # Checks to see if there is an invalid input will stop loop
     if header.error_check(choice_1) <= 0 or header.error_check(choice_1) > 5:
+        print("Failure: Invalid entry")
         i -= 1
-    choice_1 = header.error_check(choice_1)
+    choice_1 = header.error_check(choice_1) # stores the valid input into choice
 
-    choice_2 = header.checker(choice_1)
+    choice_2 = header.checker(choice_1) # will hold the value of 0 to end the loop or 1 to continue the loop
 
 
 # The following will be the future choices that will be given to the user (1) Over-World Travel Events\n\n(2) Dungeon Encounters\n\n(3)"
