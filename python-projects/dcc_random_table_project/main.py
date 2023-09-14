@@ -3,7 +3,7 @@ Programmer: Zeno Enderle
 
 Date: 9/13/2023
 
-filename: project.py // potential header file
+filename: project.py
 
 purpose: create a program that stores every single random roll table from all the DCC material I have.
 The program will roll for the table and will also be able to take a input representitive of the dice roll.

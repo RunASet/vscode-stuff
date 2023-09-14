@@ -1,4 +1,4 @@
-# Function Definitions, need to make a header file later
+# Function Definitions
 import random
 
 ##
@@ -73,8 +73,6 @@ def error_check(n):
 #
 #   return: Returns number that will be used to summon the array that holds the respective table
 ##
-
-
 def checker(n):
     if n == 1:
         x = first_choice(n)
