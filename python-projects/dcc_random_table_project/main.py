@@ -23,13 +23,13 @@ while i == 1:
     choice_1 = int(input(
         "Select what type of table do you want:\n\n(1) Events\n\n(2) Encounters\n\n(3) Magic/Gods\n\n(4) Equipment\n\n(5) Random\n\nSelect(1-5): "))
     print('\n\n')
-
+    n = header.range_of_table(choice_1,0,5)
     # Checks to see if there is an invalid input will stop loop
-    if header.range_of_table(choice_1,0,5) == 0: 
+    if n == 0: 
     #if header.error_check(choice_1) <= 0 or header.error_check(choice_1) > 5:
         print("Failure: Invalid entry")
         i -= 1
-    choice_1 = header.error_check(choice_1) # stores the valid input into choice
+    choice_1 = n # stores the valid input into choice
 
     choice_2 = header.checker(choice_1) # will hold the value of 0 to end the loop or 1 to continue the loop
 

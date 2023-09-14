@@ -1,11 +1,9 @@
 # constant variables
-CONST_MIN_TABLE_SIZE = 1
+CONST_MIN_RANGE_SIZE = 0
 
 
 # Function Definitions
 import random
-
-
 ##
 #   Function: roll_Again()
 #
@@ -70,7 +68,7 @@ class Events:
             " Travel Event Tables\n", "\b-------------------------------------\n")
         n = int(input("Where are you travelling?\n\n(1) Desert\n\n(2) Ocean\n\n(3) Mountain\n\n(4) Random\n\nSelect (1-4)"))
 
-        n = range_of_table(n,CONST_MIN_TABLE_SIZE,Events._SIZE_OF_TRAVEL_EVENT_TABLE)     
+        n = range_of_table(n,CONST_MIN_RANGE_SIZE,Events._SIZE_OF_TRAVEL_EVENT_TABLE)     
         if n == 1:
             i = 1
             while i == 1:
@@ -109,9 +107,9 @@ def error_check(n):
 #   purpose: will direct the user to respective big tables, this is mega table
 ##
 def checker(n):
-    n = range_of_table(n,CONST_MIN_TABLE_SIZE,4)
+    n = range_of_table(n,CONST_MIN_RANGE_SIZE,4)
     if n == 1:
-        x = range_of_table(Events.events_(),CONST_MIN_TABLE_SIZE,Events._SIZE_OF_EVENT_TABLE)
+        x = range_of_table(Events.events_(),CONST_MIN_RANGE_SIZE,Events._SIZE_OF_EVENT_TABLE)
         if x == 1:
             # The travel event method will then expand to allow the user to select different climates or roll on a mass table
             return Events.travel_events()
