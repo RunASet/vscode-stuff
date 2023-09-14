@@ -33,7 +33,7 @@ class Events:
         if n <= 0 or n > 4:
             return 0
         elif n == 1:
-            x = 1
+            x = 1   # The following is a loop that will allow the user to keep rolling on the respective table that they chose, I want to make this a function to reduce lines of code
             while x == 1:
                 print(random.randint(1,500)) # Is the random number that is set of a range that is as large as all the tables put together
                 y = str(input("Do you wish to roll again (y/n)? "))
