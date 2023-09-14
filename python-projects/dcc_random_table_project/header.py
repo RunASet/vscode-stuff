@@ -62,7 +62,7 @@ class Events:
     #   return: no return
     #
     #   Purpose: Provides the optiosn for all of the travel events
-
+    ##
     def travel_events():
         print("\n-------------------------------------\n",
             " Travel Event Tables\n", "\b-------------------------------------\n")
@@ -72,11 +72,37 @@ class Events:
         if n == 1:
             i = 1
             while i == 1:
-                print(random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
-                # the random integer will equal the dictionary here
+                print("desert",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
+                # the random integer will equal the desert dictionary here
                 if roll_Again() == 0:
                     i -= 1
                     return 0
+        elif n == 2:
+            i = 1
+            while i == 1:
+                print("Ocean",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
+                # the random integer will equal the desert dictionary here
+                if roll_Again() == 0:
+                    i -= 1
+                    return 0
+        elif n == 3:
+            i = 1
+            while i == 1:
+                print("Mountain",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
+                # the random integer will equal the Moutain dictionary here
+                if roll_Again() == 0:
+                    i -= 1
+                    return 0
+        elif n == 4:
+            i = 1
+            while i == 1:
+                print("Random",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
+                # the random integer will equal the Random dictionary here
+                if roll_Again() == 0:
+                    i -= 1
+                    return 0
+        else:
+            return 0
 ##
 #   function: error_check
 #
