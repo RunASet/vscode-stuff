@@ -39,6 +39,7 @@ def travel_events():
 
     if n == 1:
         print("You're a test")
+        print("Another Test")
         # desert_Array[] = rand() need to figure out what this will be gonna use a Dict to figure it out
 
 
