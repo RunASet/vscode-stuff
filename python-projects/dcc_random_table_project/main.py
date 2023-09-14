@@ -25,7 +25,8 @@ while i == 1:
     print('\n\n')
 
     # Checks to see if there is an invalid input will stop loop
-    if header.error_check(choice_1) <= 0 or header.error_check(choice_1) > 5:
+    if header.range_of_table(choice_1,0,5) == 0: 
+    #if header.error_check(choice_1) <= 0 or header.error_check(choice_1) > 5:
         print("Failure: Invalid entry")
         i -= 1
     choice_1 = header.error_check(choice_1) # stores the valid input into choice

@@ -1,7 +1,30 @@
 # Function Definitions
 import random
 
-class Events:
+
+# Potential function not sure what to do with this 
+def roll_Again():
+    y = str(input("Do you wish to roll again (y/n)? "))
+    if y != 'y' and y !='Y':
+        return 0
+##
+#   Function: range_of_table(int,int,int)
+#
+#   input: n = user_input,x = min_range,y = max_range
+#
+#   variables:    
+#   
+#   return: 0 or n
+#
+#   purpose: makes sure that the table size is not being over done
+##
+def range_of_table(n,x,y):
+    if n <= x or n > y:
+            return 0
+    else:
+        return n
+    
+class Events:       ### Events class holds everything that is used in relation to the Events selection 
     ##
     #   Method: events_(int)
     #
@@ -23,16 +46,25 @@ class Events:
     #
     #   return: no return
     #
-    #   Purpose: 
+    #   Purpose: Provides the optiosn for all of the travel events
 
     def travel_events():
         print("\n-------------------------------------\n",
             " Travel Event Tables\n", "\b-------------------------------------\n")
         n = int(input("Where are you travelling?\n\n(1) Desert\n\n(2) Ocean\n\n(3) Mountain\n\n(4) Random\n\nSelect (1-4)"))
 
-        if n <= 0 or n > 4:
-            return 0
-        elif n == 1:
+        n = range_of_table(n,0,4)     
+        if n == 1:
+            i = 1
+            while i == 1:
+                print(random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
+                # the random integer will equal the dictionary here
+                if roll_Again() == 0:
+                    i -= 1
+                    return 0
+
+                
+            """
             x = 1   # The following is a loop that will allow the user to keep rolling on the respective table that they chose, I want to make this a function to reduce lines of code
             while x == 1:
                 print(random.randint(1,500)) # Is the random number that is set of a range that is as large as all the tables put together
@@ -41,7 +73,7 @@ class Events:
                     x -= 1
                     return 0
             # desert_Array[] = rand() need to figure out what this will be gonna use a Dict to figure it out
-            
+            """
 
 ##
 #   function: error_check
@@ -68,7 +100,7 @@ def error_check(n):
 #
 #   Input: int data type, representing the very first number input from the user
 #
-#   return: Returns number that will be used to summon the array that holds the respective table
+#   return: Returns either 0 or 1 to signal if running should stop
 ##
 def checker(n):
     if n == 1:
@@ -80,15 +112,3 @@ def checker(n):
             return Events.travel_events()
 
 
-# Potential function not sure what to do with this 
-"""
-def roll_Again(n):
-    x = 1
-    while x == 1:
-        # print(random.randint(1,500)) # Is the random number that is set of a range that is as large as all the tables put together
-        y = str(input("Do you wish to roll again (y/n)? "))
-        if y == 'n' and 'N' and y != 'y' and 'Y':
-           x -= 1
-           return 0
-    return roll_Again(n)
-"""    
