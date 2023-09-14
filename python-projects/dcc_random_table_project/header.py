@@ -1,18 +1,5 @@
-"""
-Programmer: Zeno Enderle
-
-Date: 9/13/2023
-
-filename: project.py // potential header file
-
-purpose: create a program that stores every single random roll table from all the DCC material I have.
-The program will roll for the table and will also be able to take a input representitive of the dice roll.
-The point is to provide a faster and more random experience overall while sticking true to the source material.
-
-Future Goals: Make it so I have a website similar to 5etools, Will have blocks user can click on to take them to the table choices
-So that the User will not have to manually input the command into the terminal.
-"""
 # Function Definitions, need to make a header file later
+import random
 
 ##
 #   function: first_choice(int)
@@ -22,7 +9,6 @@ So that the User will not have to manually input the command into the terminal.
 #   return: int data type represents preceding choice
 ##
 
-
 def first_choice(n):   # Acts as a switch case statement that will check all the possible choices and return The next dialouge box for the user
     if n == 1:         # Choice for Events
         print("\n-------------------------------------\n",
@@ -30,7 +16,14 @@ def first_choice(n):   # Acts as a switch case statement that will check all the
         return int(input("(1) Travel\n\n(2) Dungeon\n\n(3) Town/Village\n\n(4) City\n\nInput (1-4)"))
     else:
         return 0
-
+##
+#   function: travel_events()
+#
+#   input: no input
+#
+#   return: no return
+#
+#   Purpose: 
 
 def travel_events():
     print("\n-------------------------------------\n",
@@ -38,11 +31,21 @@ def travel_events():
     n = int(input("Where are you travelling?\n\n(1) Desert\n\n(2) Ocean\n\n(3) Mountain\n\n(4) Random\n\nSelect (1-4)"))
 
     if n == 1:
-        print("You're a test")
-        print("Another Test")
+        
+        print(random.randint(1,500)) # Is the random number that is set of a range that is as large as all the tables put together
         # desert_Array[] = rand() need to figure out what this will be gonna use a Dict to figure it out
-
-
+    elif n == 2:
+        
+        print(random.randint(1,500)) # Is the random number that is set of a range that is as large as all the tables put together
+        # Ocean_Array[] = rand() need to figure out what this will be gonna use a Dict to figure it out    
+    elif n == 3:
+        
+        print(random.randint(1,500)) # Is the random number that is set of a range that is as large as all the tables put together
+        # mountain_Array[] = rand() need to figure out what this will be gonna use a Dict to figure it out
+    elif n == 4:
+        
+        print(random.randint(1,500)) # Is the random number that is set of a range that is as large as all the tables put together
+        # all_arrays_combined_Array[] = rand() need to figure out what this will be gonna use a Dict to figure it out
 ##
 #   function: error_check
 #
@@ -80,23 +83,3 @@ def checker(n):
         if x == 1:
             # The travel event function will then expand to allow the user to select different climates or roll on a mass table
             return travel_events()
-
-
-# Main function
-print("\n-------------------------------------\n",
-      "DCC Random Tables\n", "\b-------------------------------------\n")
-i = 1
-while i == 1:
-    choice_1 = int(input(
-        "Select what type of table do you want:\n\n(1) Events\n\n(2) Encounters\n\n(3) Magic/Gods\n\n(4) Equipment\n\n(5) Random\n\nSelect(1-5): "))
-    print('\n\n')
-
-    # Checks to see if there is an invalid input will stop loop
-    if error_check(choice_1) <= 0 or error_check(choice_1) > 5:
-        i -= 1
-    choice_1 = error_check(choice_1)
-
-    choice_2 = checker(choice_1)
-
-
-# The following will be the future choices that will be given to the user (1) Over-World Travel Events\n\n(2) Dungeon Encounters\n\n(3)"
