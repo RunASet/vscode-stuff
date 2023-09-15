@@ -1,7 +1,8 @@
 import header
 import random
+import desert
 ### Events class holds everything that is used in relation to the Events selection    
-class Events:        
+class Events(object):        
     _SIZE_OF_EVENT_TABLE = 4          # Attribute size of the Event table
     _SIZE_OF_TRAVEL_EVENT_TABLE = 4
     
@@ -40,7 +41,7 @@ class Events:
         if n == 1:
             i = 1
             while i == 1:
-                print("desert",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
+                print(desert._TRAVEL_EVENTS.get(random.randint(1,4)))  # random number range of the respective table, user may change these to incorporate new choices
                 # the random integer will equal the desert dictionary index here, to be added later, print is for debugging
                 # use get() method for getting the dictionary values
                 if header.roll_Again() == 0:
