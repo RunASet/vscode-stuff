@@ -4,6 +4,7 @@ import desert
 import ocean
 import mountain
 import travel_random
+
 ### Events class holds everything that is used in relation to the Events selection    
 class Events():        
     _SIZE_OF_EVENT_TABLE = 4          # Attribute size of the Event table
