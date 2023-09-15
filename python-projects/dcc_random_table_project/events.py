@@ -41,7 +41,7 @@ class Events:
             i = 1
             while i == 1:
                 print("desert",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
-                # the random integer will equal the desert dictionary here, to be added later print is for debugging
+                # the random integer will equal the desert dictionary index here, to be added later, print is for debugging
                 if header.roll_Again() == 0:
                     i -= 1
                     return 0

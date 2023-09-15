@@ -13,6 +13,7 @@ Future Goals: Make it so I have a website similar to 5etools, Will have blocks u
 So that the User will not have to manually input the command into the terminal.
 """
 import header
+import events
 
 
 # Main function

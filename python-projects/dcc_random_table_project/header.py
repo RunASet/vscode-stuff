@@ -70,9 +70,9 @@ def error_check(n):
 def checker(n):
     n = range_of_table(n,CONST_MIN_RANGE_SIZE,4)
     if n == 1:
-        x = range_of_table(events.events_(),CONST_MIN_RANGE_SIZE,events._SIZE_OF_EVENT_TABLE)
+        x = range_of_table(events.Events.events_(),CONST_MIN_RANGE_SIZE,events.Events._SIZE_OF_EVENT_TABLE)
         if x == 1:
             # The travel event method will then expand to allow the user to select different climates or roll on a mass table
-            return events.travel_events()
+            return events.Events.travel_events()
 
 
