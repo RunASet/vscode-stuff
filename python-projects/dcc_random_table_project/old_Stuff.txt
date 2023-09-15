@@ -1,0 +1,44 @@
+The Following are previous methods and functions that I used, saving them here if the new code I've added ruins the stuff I have made already.
+
+1. The following is a function that could make the if else statement chains reduntdant need to find a way to make it return a integer for the dictionary
+##
+#   function: print_random_event(int)
+#
+#   Input: integer representing the players choice of table
+#
+#   variables: integer data type, n == Holds players choice
+#
+#   return: no return
+#
+#   purpose: Perform while loop that will let the player keep rolling on a same table if they choose too, will grab the table
+
+def print_random_event(n):
+    i = 1
+    while i == 1:
+        print(n["name"], random.randint(1, n["table_size"]))
+        if roll_Again() == 0:
+            break
+
+2. The following is a method that allows us to grab select which table we want using a dictionary than the other method
+
+def travel_events():
+        print("\n-------------------------------------\n"," Travel Event Tables\n", "\b-------------------------------------\n")
+        n = int(input("Where are you travelling?\n\n"
+                  "(1) Desert\n"
+                  "(2) Ocean\n"
+                  "(3) Mountain\n"
+                  "(4) Random\n"
+                  "Select (1-4): "))
+        event = Events._TRAVEL_EVENTS.get(n)
+        if event:
+            print_random_event(event)
+        else:
+            print("Invalid choice. Please select a number between 1 and 4.")
+
+3. The following is a Attribute that represents a dictionary that holds the value of all the possible tables we might roll wit
+_TRAVEL_EVENTS = {
+    1: {"name": "Desert", "table_size": 500},
+    2: {"name": "Ocean", "table_size": 500},
+    3: {"name": "Mountain", "table_size": 500},
+    4: {"name": "Random", "table_size": 500},
+}

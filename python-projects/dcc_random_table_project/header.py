@@ -3,7 +3,7 @@ CONST_MIN_RANGE_SIZE = 0
 
 
 # Function Definitions
-import random
+import events
 ##
 #   Function: roll_Again()
 #
@@ -19,6 +19,7 @@ def roll_Again():
     y = str(input("Do you wish to roll again (y/n)? "))
     if y != 'y' and y !='Y':
         return 0
+
 ##
 #   Function: range_of_table(int,int,int)
 #
@@ -36,73 +37,7 @@ def range_of_table(n,x,y):
     else:
         return n
     
-### Events class holds everything that is used in relation to the Events selection    
-class Events:        
-    _SIZE_OF_EVENT_TABLE = 4          # Attribute size of the Event table
-    _SIZE_OF_TRAVEL_EVENT_TABLE = 4
-    ##
-    #   Method: events_(int)
-    #
-    #   input: int data type that represents the first selection the user made
-    #
-    #   return: int data type represents preceding choice
-    #
-    #   purpose: recieves value from the 
-    ##
-    def events_():   
-                 # Choice for Events
-        print("\n-------------------------------------\n",
-                "Event Tables\n", "\b-------------------------------------\n")
-        return int(input("(1) Travel\n\n(2) Dungeon\n\n(3) Town/Village\n\n(4) City\n\nInput (1-4)"))
-    ##
-    #   method: travel_events()
-    #
-    #   input: no input
-    #
-    #   return: no return
-    #
-    #   Purpose: Provides the optiosn for all of the travel events
-    ##
-    def travel_events():
-        print("\n-------------------------------------\n",
-            " Travel Event Tables\n", "\b-------------------------------------\n")
-        n = int(input("Where are you travelling?\n\n(1) Desert\n\n(2) Ocean\n\n(3) Mountain\n\n(4) Random\n\nSelect (1-4)"))
 
-        n = range_of_table(n,CONST_MIN_RANGE_SIZE,Events._SIZE_OF_TRAVEL_EVENT_TABLE)     
-        if n == 1:
-            i = 1
-            while i == 1:
-                print("desert",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
-                # the random integer will equal the desert dictionary here
-                if roll_Again() == 0:
-                    i -= 1
-                    return 0
-        elif n == 2:
-            i = 1
-            while i == 1:
-                print("Ocean",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
-                # the random integer will equal the desert dictionary here
-                if roll_Again() == 0:
-                    i -= 1
-                    return 0
-        elif n == 3:
-            i = 1
-            while i == 1:
-                print("Mountain",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
-                # the random integer will equal the Moutain dictionary here
-                if roll_Again() == 0:
-                    i -= 1
-                    return 0
-        elif n == 4:
-            i = 1
-            while i == 1:
-                print("Random",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
-                # the random integer will equal the Random dictionary here
-                if roll_Again() == 0:
-                    i -= 1
-                    return 0
-        else:
-            return 0
 ##
 #   function: error_check
 #
@@ -135,9 +70,9 @@ def error_check(n):
 def checker(n):
     n = range_of_table(n,CONST_MIN_RANGE_SIZE,4)
     if n == 1:
-        x = range_of_table(Events.events_(),CONST_MIN_RANGE_SIZE,Events._SIZE_OF_EVENT_TABLE)
+        x = range_of_table(events.events_(),CONST_MIN_RANGE_SIZE,events._SIZE_OF_EVENT_TABLE)
         if x == 1:
             # The travel event method will then expand to allow the user to select different climates or roll on a mass table
-            return Events.travel_events()
+            return events.travel_events()
 
 
