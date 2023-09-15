@@ -1,8 +1,11 @@
 import header
 import random
 import desert
+import ocean
+import mountain
+import travel_random
 ### Events class holds everything that is used in relation to the Events selection    
-class Events(object):        
+class Events():        
     _SIZE_OF_EVENT_TABLE = 4          # Attribute size of the Event table
     _SIZE_OF_TRAVEL_EVENT_TABLE = 4
     
@@ -27,11 +30,8 @@ class Events(object):
     #
     #   return: no return
     #
-    #   Purpose: Provides the optiosn for all of the travel events
+    #   Purpose: Provides the options for all of the travel events
     ##
-
-
-    
     def travel_events():
         print("\n-------------------------------------\n",
             " Travel Event Tables\n", "\b-------------------------------------\n")
@@ -41,7 +41,7 @@ class Events(object):
         if n == 1:
             i = 1
             while i == 1:
-                print(desert._TRAVEL_EVENTS.get(random.randint(1,4)))  # random number range of the respective table, user may change these to incorporate new choices
+                print(desert.DESERT_TRAVEL_EVENTS.get(random.randint(1,desert.SIZE_OF_DESERT)))  # random number range of the respective table, user may change these to incorporate new choices
                 # the random integer will equal the desert dictionary index here, to be added later, print is for debugging
                 # use get() method for getting the dictionary values
                 if header.roll_Again() == 0:
@@ -50,7 +50,7 @@ class Events(object):
         elif n == 2:
             i = 1
             while i == 1:
-                print("Ocean",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
+                print(mountain.MOUNTAIN_TRAVEL_EVENTS.get(random.randint(1,4)))  # random number range of the respective table, user may change these to incorporate new choices
                 # the random integer will equal the Ocean dictionary here
                 if header.roll_Again() == 0:
                     i -= 1
@@ -58,7 +58,7 @@ class Events(object):
         elif n == 3:
             i = 1
             while i == 1:
-                print("Mountain",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
+                print(ocean.OCEAN_TRAVEL_EVENTS.get(random.randint(1,4)))  # random number range of the respective table, user may change these to incorporate new choices
                 # the random integer will equal the Moutain dictionary here
                 if header.roll_Again() == 0:
                     i -= 1
@@ -66,7 +66,7 @@ class Events(object):
         elif n == 4:
             i = 1
             while i == 1:
-                print("Random",random.randint(1,500))  # random number range of the respective table, user may change these to incorporate new choices
+                print(travel_random.RANDOM_TRAVEL_EVENTS.get(random.randint(1,4)))  # random number range of the respective table, user may change these to incorporate new choices
                 # the random integer will equal the Random dictionary here
                 if header.roll_Again() == 0:
                     i -= 1
