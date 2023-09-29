@@ -1,0 +1,22 @@
+# Helpful guide to understanding IT roles
+There are two parts of each of those job titles:
+
+Concentration and Role. System and Network are a concentration and Administrator and Engineer are a role.
+
+Concentrations
+
+When job titles are well defined a System concentration is responsible for server infrastructure and sometimes operating systems and software (Sometimes this is handled by someone with a "Server" concentration.)
+
+On the other hand the Network concentration is almost always responsible solely for network infrastructure such as LAN/WAN and sometimes wireless (Again sometimes being broken off).
+
+Role
+
+I am going to go a little in depth outside the question you ask because it makes this easier to follow.
+
+There are 3 common roles in a concentration when dealing with IT
+
+Architect: Responsible for taking business problems and constructing a reasonable technical solution. The role itself is not involved with building or maintaining that final infrastructure. Works with Engineers to design a bill of materials and plan for translating the solution to a workable engineering plan. May work with administrators to design a workable maintenance plan which usually involved engineers as well.
+
+Engineer: Responsible for taking technical plan provided by architect and implementing actual infrastructure or other components of the value stream. Works with architects to ensure executed plan matches the architecture designed to solve the problem while also translating portions of the architecture to technically feasible solutions when needed. Works with Administrators to ensure the infrastructure is maintainable (Backups, Redundancy, etc).
+
+Administrator: Responsible for the day to day operations of the infrastructure as designed by an architect and implemented by an engineer.
