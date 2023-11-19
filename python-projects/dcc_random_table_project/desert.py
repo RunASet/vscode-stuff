@@ -1,7 +1,7 @@
 
 
 DESERT_TRAVEL_EVENTS = {
-    1: "\n\n\n\n\n\n--------------------\nencounter\n--------------------\nCR: 2\nAC: 1 HP: 1 ATK: +2 DMG: +1 \n17 Scorpions\n\nLink: https://5e.tools/bestiary.html#scorpion_mm \n\n\n\n\n\n\n\n\n",
+    1: "CR: 2\nAC: 1 HP: 1 ATK: +2 DMG: 1 \n17 Scorpions\n\nLink: https://5e.tools/bestiary.html#scorpion_mm",
     2: "4 vultures",
     3: "1 abandoned mule",
     4: "6 commoners with 2d4 camels bound for a distant city",

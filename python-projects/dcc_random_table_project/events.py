@@ -42,7 +42,10 @@ class Events():
         if n == 1:
             i = 1
             while i == 1:
-                print(desert.DESERT_TRAVEL_EVENTS.get(random.randint(1,desert.SIZE_OF_DESERT)))  # random number range of the respective table, user may change these to incorporate new choices
+                print("\n\n--------------------\nencounter\n--------------------\n",
+                      desert.DESERT_TRAVEL_EVENTS.get(random.randint(1,desert.SIZE_OF_DESERT)),
+                      "\n\n") 
+                # random number range of the respective table, user may change these to incorporate new choices
                 # the random integer will equal the desert dictionary index here, to be added later, print is for debugging
                 # use get() method for getting the dictionary values
                 if header.roll_Again() == 0:
@@ -51,7 +54,10 @@ class Events():
         elif n == 2:
             i = 1
             while i == 1:
-                print(mountain.MOUNTAIN_TRAVEL_EVENTS.get(random.randint(1,4)))  # random number range of the respective table, user may change these to incorporate new choices
+                print("\n\n--------------------\nencounter\n--------------------\n",
+                      mountain.MOUNTAIN_TRAVEL_EVENTS.get(random.randint(1,4)),
+                      "\n\n")  
+                # random number range of the respective table, user may change these to incorporate new choices
                 # the random integer will equal the Ocean dictionary here
                 if header.roll_Again() == 0:
                     i -= 1
@@ -59,7 +65,10 @@ class Events():
         elif n == 3:
             i = 1
             while i == 1:
-                print(ocean.OCEAN_TRAVEL_EVENTS.get(random.randint(1,4)))  # random number range of the respective table, user may change these to incorporate new choices
+                print("\n\n--------------------\nencounter\n--------------------\n",
+                      ocean.OCEAN_TRAVEL_EVENTS.get(random.randint(1,4)),
+                      "\n\n")  
+                # random number range of the respective table, user may change these to incorporate new choices
                 # the random integer will equal the Moutain dictionary here
                 if header.roll_Again() == 0:
                     i -= 1
@@ -67,7 +76,10 @@ class Events():
         elif n == 4:
             i = 1
             while i == 1:
-                print(travel_random.RANDOM_TRAVEL_EVENTS.get(random.randint(1,4)))  # random number range of the respective table, user may change these to incorporate new choices
+                print("\n\n--------------------\nencounter\n--------------------\n",
+                      travel_random.RANDOM_TRAVEL_EVENTS.get(random.randint(1,4)),
+                      "\n\n")  
+                # random number range of the respective table, user may change these to incorporate new choices
                 # the random integer will equal the Random dictionary here
                 if header.roll_Again() == 0:
                     i -= 1
