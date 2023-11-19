@@ -55,7 +55,7 @@ class Events():
             i = 1
             while i == 1:
                 print("\n\n--------------------\nencounter\n--------------------\n",
-                      mountain.MOUNTAIN_TRAVEL_EVENTS.get(random.randint(1,4)),
+                      mountain.MOUNTAIN_TRAVEL_EVENTS.get(random.randint(1,mountain.SIZE_OF_MOUNTAIN)),
                       "\n\n")  
                 # random number range of the respective table, user may change these to incorporate new choices
                 # the random integer will equal the Ocean dictionary here
@@ -66,7 +66,7 @@ class Events():
             i = 1
             while i == 1:
                 print("\n\n--------------------\nencounter\n--------------------\n",
-                      ocean.OCEAN_TRAVEL_EVENTS.get(random.randint(1,4)),
+                      ocean.OCEAN_TRAVEL_EVENTS.get(random.randint(1,ocean.SIZE_OF_OCEAN)),
                       "\n\n")  
                 # random number range of the respective table, user may change these to incorporate new choices
                 # the random integer will equal the Moutain dictionary here
@@ -77,7 +77,7 @@ class Events():
             i = 1
             while i == 1:
                 print("\n\n--------------------\nencounter\n--------------------\n",
-                      travel_random.RANDOM_TRAVEL_EVENTS.get(random.randint(1,4)),
+                      travel_random.RANDOM_TRAVEL_EVENTS.get(random.randint(1,random.SIZE_OF_RANDOM)),
                       "\n\n")  
                 # random number range of the respective table, user may change these to incorporate new choices
                 # the random integer will equal the Random dictionary here
