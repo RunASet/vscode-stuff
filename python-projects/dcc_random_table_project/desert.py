@@ -33,6 +33,7 @@ DESERT_TRAVEL_EVENTS = {
     30: "1 Wight",
     31: "1 Ogre and 1 el-goblino",
     32: "A single Brass Lamp on the ground, there is a faint oil trail (DC 20 Investigation check to find where the trail leads) the trail leads goes into a cave.",
+    33: "One thing",
 }
 
-SIZE_OF_DESERT = 21
+SIZE_OF_DESERT = 33
